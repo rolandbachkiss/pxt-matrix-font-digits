@@ -1,14 +1,12 @@
 {
     "name": "matrix-font-digits",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Digits 0-9 and clock symbols (:.-) (5x7 bitmap font) for pxt-matrix-text",
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "neopixel": "github:microsoft/pxt-neopixel#v0.7.6",
-        "matrix-core": "github:rolandbachkiss/pxt-matrix-core#v0.1.2",
-        "matrix-text": "github:rolandbachkiss/pxt-matrix-text#v0.0.1"
-    },
+        "matrix-core": "github:rolandbachkiss/pxt-matrix-core#v0.2.0",
+        "matrix-text": "github:rolandbachkiss/pxt-matrix-text#v0.1.0"    },
     "files": [
         "README.md",
         "font-digits.ts"
