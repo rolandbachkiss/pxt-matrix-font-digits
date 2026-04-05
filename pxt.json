@@ -1,6 +1,6 @@
 {
     "name": "matrix-font-digits",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Digits 0-9 and clock symbols (:.-) (5x7 bitmap font) for pxt-matrix-text",
     "license": "MIT",
     "dependencies": {
