@@ -1,32 +1,41 @@
 # pxt-matrix-font-digits
 
-A MakeCode micro:bit extension providing digits 0–9 and common clock/display symbols (`:`, `.`, `-`) as a 5×7 bitmap font for use with [pxt-matrix-text](https://github.com/rolandbachkiss/pxt-matrix-text).
+Digits 0–9 and common symbols (`:`, `.`, `-`) as a 5×7 bitmap font for [pxt-matrix-text](https://github.com/rolandbachkiss/pxt-matrix-text).
 
 ## Usage
 
-Simply add this extension to your project. On load, it automatically registers the font with `matrixText`, making all digits and symbols available in `matrixText.drawText()` — no manual setup required.
-
-You can also retrieve the font object directly:
+Simply add this extension to your project. On load, it automatically registers the font with `matrixText` — no manual setup required.
 
 ```typescript
-const dig = matrixFontDigits.font()
-// dig.glyphW === 5, dig.glyphH === 7
+matrixText.drawText("12:34", 2, 2, matrixCore.rgb(255, 100, 0))
 ```
 
-## Supported characters
+## Supported Characters
 
 `0 1 2 3 4 5 6 7 8 9 : . -`
 
-Ideal for displaying times (`12:34`), dates, counters, and numeric readouts on LED matrix displays.
+Ideal for displaying times, dates, counters, and numeric readouts on LED matrix displays.
 
-## Font format
+## Font Details
 
-- Glyph size: 5×7 pixels
-- Layout: column-major, 1 byte per column, bit 0 = top row
-- Data stored in flash (zero RAM cost)
+| Property | Value |
+|----------|-------|
+| Glyph size | 5×7 pixels |
+| Layout | Column-major, 1 byte per column, bit 0 = top row |
+| Data | Stored in flash (zero RAM cost) |
+| Characters | 13 glyphs |
+
+## API
+
+| Block | Description |
+|-------|-------------|
+| `digits font (5×7)` | Returns the MatrixFont object |
 
 ## Dependencies
 
-- [pxt-matrix-core](https://github.com/rolandbachkiss/pxt-matrix-core)
 - [pxt-matrix-text](https://github.com/rolandbachkiss/pxt-matrix-text)
-- [pxt-neopixel](https://github.com/microsoft/pxt-neopixel) v0.7.6
+- [pxt-matrix-core](https://github.com/rolandbachkiss/pxt-matrix-core)
+
+## License
+
+MIT © Roland Bach Kiss
